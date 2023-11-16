@@ -7,8 +7,6 @@
 
 import UIKit
 
-var totalNumber: Int = 0
-
 class ViewController: UIViewController {
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -29,22 +27,22 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        let n1 = StringToInt(input: textField1.text!)
-        let n2 = StringToInt(input: textField2.text!)
-        let n3 = StringToInt(input: textField3.text!)
-        let n4 = StringToInt(input: textField4.text!)
-        let n5 = StringToInt(input: textField5.text!)
+        let n1 = convertStringToInt(input: textField1.text!)
+        let n2 = convertStringToInt(input: textField2.text!)
+        let n3 = convertStringToInt(input: textField3.text!)
+        let n4 = convertStringToInt(input: textField4.text!)
+        let n5 = convertStringToInt(input: textField5.text!)
         
-        totalNumber = n1 + n2 + n3 + n4 + n5
-        
+        let totalNumber = n1 + n2 + n3 + n4 + n5
+
         label.text = String(totalNumber)
     }
     
-    func StringToInt(input: String) -> Int {
-       
+    func convertStringToInt(input: String) -> Int {
+
         let output = Int(input) ?? 0
         
-     return output
+        return output
     }
 
     
